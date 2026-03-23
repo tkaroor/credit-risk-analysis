@@ -13,11 +13,15 @@ Source: Kaggle Home Credit Default Risk dataset(https://www.kaggle.com/datasets/
 The dataset contains 307,511 loan applications, where each row represents an individual applicant.
 
 Key variables used in the analysis:
-target – Loan outcome (0 = repaid, 1 = default)
-amt_income_total – Applicant’s total income
-amt_credit – Loan amount requested 
-amt_annuity – Loan repayment amount
-ext_source_2 – External credit risk score (primary risk indicator)
+
+| Variable           | Description |
+|--------------------|-------------|
+| `target`           | Loan outcome (0 = repaid, 1 = default) |
+| `amt_income_total` | Applicant’s total income |
+| `amt_credit`       | Loan amount requested  |
+| `amt_annuity`      | Loan repayment amount |
+| `ext_source_2`     | External credit risk score (primary risk indicator) |
+
 
 ---
 
@@ -44,8 +48,11 @@ The overall default rate is 8.07%, indicating a relatively small proportion of h
 Income shows minimal variation in default rates across segments (approximately 7.6% to 8.5%), suggesting it is not a strong standalone predictor of default.
 
 External risk scores show a clear separation in default behavior:
+
 Low risk score group: 15.88% default rate
+
 Medium risk score group: 7.21% default rate
+
 High risk score group: 3.31% default rate
 
 In combined segmentation, default rates remain consistent within each risk score group regardless of income level. For example, high-income applicants with low risk scores exhibit significantly higher default rates than lower-income applicants with high risk scores.
