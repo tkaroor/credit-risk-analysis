@@ -54,3 +54,16 @@ ORDER BY default_rate DESC;
 -- risk score dominates income in predicting default
 
 
+-- Average loan size for defaulters vs non-defaulters
+SELECT
+    target,
+    ROUND(AVG(amt_credit)::numeric, 2) AS avg_loan_amount
+FROM application_train
+GROUP BY target;
+
+-- Loan burden: credit relative to income
+SELECT
+    target,
+    ROUND(AVG(amt_credit / NULLIF(amt_income_total, 0))::numeric, 4) AS avg_credit_income_ratio
+FROM application_train
+GROUP BY target;
